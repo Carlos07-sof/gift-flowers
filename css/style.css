@@ -1,0 +1,83 @@
+/* Importación de la fuente */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: azure;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+h1 {
+    font-size: 1.2rem;
+    color: white;
+    animation: glow 2s ease-in-out infinite;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #c6c2c9;
+    margin-bottom: 20px;
+    text-align: end;
+}
+
+@keyframes glow {
+    0%, 100% {
+        color: #fff;
+        text-shadow: 0 0 12px #fbff00, 0 0 50px #fbff00, 0 0 100px #fbff00;
+    }
+    50% {
+        color: #696565;
+        text-shadow: none;
+    }
+}
+
+/* Estilo para el botón */
+.button button {
+    background-color: yellow; /* Fondo amarillo */
+    border: none; /* Sin bordes */
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 20px; /* Esquinas redondeadas */
+    transition: background-color 0.3s ease-in-out;
+    text-transform: uppercase;
+}
+
+/* Efecto de resplandor al pasar el cursor sobre el botón */
+.button button:hover {
+    background-color: rgb(249, 240, 1);
+    box-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
+}
+
+/* Elimina subrayado del enlace */
+.button button a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Responsivo */
+@media screen and (max-width: 574px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .description {
+        font-size: 1rem;
+    }
+    .button button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
